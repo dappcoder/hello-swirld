@@ -9,8 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <sdk.dir>/home/alex/Repositories/swirlds/sdk-new/sdk</sdk.dir>
-        <!--<sdk.dir>/home/swirlds/sdk</sdk.dir>-->
+        <sdk.dir>/home/swirlds/sdk</sdk.dir>
         <app.name>HelloSwirld</app.name>
 
         <app.repo>${sdk.dir}/data/repos/app/</app.repo>
