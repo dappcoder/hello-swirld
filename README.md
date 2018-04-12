@@ -3,6 +3,7 @@ This is an alternative (arguably friendlier) maven setup for Hashgraph SDK based
 
 It allows you to build and run hashgraph apps using the SDK more like an external resource rather than creating new modules along the demo apps inside the SDK directory structure.
 
+Clone this repo to whatever location (independend from the Hashgraph sdk).
 #### Install Hashgraph SDK
 Follow the pre-requisites, download and unzip the SDK to preferred location. See https://dev.hashgraph.com/docs/installation/
 
