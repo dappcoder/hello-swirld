@@ -1,9 +1,9 @@
-# Hashgraph application template
+# Hashgraph Application Template
 This is an alternative (arguably friendlier) maven setup for Hashgraph SDK based applications.
 
-It allows you to build and run hashgraph apps using the SDK more like an external resource rather than creating new modules along the demo apps inside the SDK directory structure.
+It allows you to build and run Hashgraph apps using the SDK more like an external resource rather than creating new modules along the demo apps inside the SDK directory structure.
 
-Clone this repo to whatever location (independend from the Hashgraph sdk).
+Clone this repo to whatever location (independent from the Hashgraph sdk).
 ## Install Hashgraph SDK
 Follow the pre-requisites, download and unzip the SDK to preferred location. See https://www.swirlds.com/download/
 
@@ -22,7 +22,7 @@ TLS, off
 ```
 
 ## Configure this Project
-You only need to change the sdk.dir property to refer to the path of your sdk installation (the directory path where you found the config.txt file).
+You only need to change the swirlds.sdk property to refer to the path of your SDK installation (the directory path where you found the config.txt file).
 The default is:
 ```
 <swirlds.sdk>/home/swirlds/sdk</swirlds.sdk>
@@ -32,18 +32,18 @@ The default is:
 ```
 mvn clean install
 ```
-this will package the app jar and copy it to the `apps` dir inside the hashgraph sdk
+this will package the app jar and copy it to the `apps` dir inside the Hashgraph SDK
 
 ### Run from IntelliJ IDEA
 1. Run -> Edit Configurations...
-2. Add new Application cofiguration
+2. Add new Application configuration
 3. Main Class: Main
-4. Working Directory: the sdk path (the same one you configured in the pom.xml)
+4. Working Directory: the SDK path (the same one you configured in the pom.xml)
 
 You should see four console windows and one main browser window.
 
 ### Run from command line
-To run it in the usual way, go to hashgraph sdk dir
+To run it in the usual way, go to Hashgraph SDK dir
 ```
 java -jar swirlds.jar
 ```
