@@ -4,16 +4,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>HelloSwirld</groupId>
+    <groupId>hello.world</groupId>
     <artifactId>HelloSwirld</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <sdk.dir>/home/swirlds/sdk</sdk.dir>
-        <app.name>HelloSwirld</app.name>
-
-        <app.repo>${sdk.dir}/data/repos/app/</app.repo>
-        <platform.repo>${sdk.dir}/data/repos/platform/</platform.repo>
+        <swirlds.sdk>/users/connor/Documents/hashgraph/sdk</swirlds.sdk>
+        <swirlds.app.repo>${swirlds.sdk}/data/repos/app/</swirlds.app.repo>
+        <swirlds.platform.repo>${swirlds.sdk}/data/repos/platform/</swirlds.platform.repo>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -21,7 +19,7 @@
         <repository>
             <id>platform.repo</id>
             <name>platform</name>
-            <url>file://${platform.repo}</url>
+            <url>file://${swirlds.platform.repo}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -34,7 +32,7 @@
         <repository>
             <id>app.repo</id>
             <name>app</name>
-            <url>file://${app.repo}</url>
+            <url>file://${swirlds.app.repo}</url>
             <releases>
                 <enabled>true</enabled>
                 <updatePolicy>always</updatePolicy>
@@ -45,6 +43,14 @@
             </snapshots>
         </repository>
     </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>SwirldsPlatform</groupId>
+            <artifactId>swirlds</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -81,7 +87,7 @@
                             <version>${project.version}</version>
                             <type>${project.packaging}</type>
                             <destFileName>${project.artifactId}.${project.packaging}</destFileName>
-                            <outputDirectory>${sdk.dir}/data/apps/</outputDirectory>
+                            <outputDirectory>${swirlds.sdk}/data/apps/</outputDirectory>
                         </artifactItem>
                     </artifactItems>
                 </configuration>
@@ -89,11 +95,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>2.3.2</version>
+                <version>3.1.0</version>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>${app.name}Main</mainClass>
+                            <mainClass>Main</mainClass>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>../lib/</classpathPrefix>
                             <useUniqueVersions>false</useUniqueVersions>
@@ -103,12 +109,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <dependency>
-            <groupId>SwirldsPlatform</groupId>
-            <artifactId>swirlds</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-    </dependencies>
 </project>
