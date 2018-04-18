@@ -5,7 +5,7 @@ It allows you to build and run Hashgraph apps using the SDK more like an externa
 
 Clone this repo to whatever location (independent from the Hashgraph sdk).
 ## Install Hashgraph SDK
-Follow the pre-requisites, download and unzip the SDK to preferred location. See https://www.swirlds.com/download/
+Follow the pre-requisites, download and unzip the SDK to preferred location. See https://dev.hashgraph.com/docs/installation/
 
 ### Configure the SDK:
 1. change the `config.txt` file found in the SDK as follows:
