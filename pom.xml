@@ -9,7 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <swirlds.sdk>/users/connor/Documents/hashgraph/sdk</swirlds.sdk>
+        <swirlds.sdk>/home/swirlds/sdk</swirlds.sdk>
         <swirlds.app.repo>${swirlds.sdk}/data/repos/app/</swirlds.app.repo>
         <swirlds.platform.repo>${swirlds.sdk}/data/repos/platform/</swirlds.platform.repo>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
