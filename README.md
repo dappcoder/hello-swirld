@@ -28,6 +28,8 @@ The default is:
 <swirlds.sdk>/home/swirlds/sdk</swirlds.sdk>
 ```
 
+NOTE: The main class must not solely be named `Main` since Swirld expects a prefix before Main for it to run in their browser.
+
 ### Building
 ```
 mvn clean install

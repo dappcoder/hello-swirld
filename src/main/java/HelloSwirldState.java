@@ -3,7 +3,7 @@ import com.swirlds.platform.*;
 import java.io.IOException;
 import java.time.Instant;
 
-public class State implements SwirldState {
+public class HelloSwirldState implements SwirldState {
 
     /**
      * Initialize everything to reflect the consensus state at the start of history, before any transactions have happened.
@@ -50,7 +50,7 @@ public class State implements SwirldState {
 
     @Override
     public FastCopyable copy() {
-        return new State();
+        return new HelloSwirldState();
     }
 
     /**
