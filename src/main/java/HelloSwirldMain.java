@@ -1,6 +1,6 @@
 import com.swirlds.platform.*;
 
-public class Main implements SwirldMain {
+public class HelloSwirldMain implements SwirldMain {
 
     /**
      * This should only be called by the Platform.
@@ -32,7 +32,7 @@ public class Main implements SwirldMain {
      */
     @Override
     public SwirldState newState() {
-        return new State();
+        return new HelloSwirldState();
     }
 
     public static void main(String[] args) {
